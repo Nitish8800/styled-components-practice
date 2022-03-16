@@ -43,6 +43,8 @@ export default function App() {
     }, 300);
   };
 
+  // console.log()
+
   return (
     <div className="App">
       <h3>Counter : {counter}</h3>

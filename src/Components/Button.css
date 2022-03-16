@@ -4,6 +4,7 @@
   border-radius: 4px;
   padding: 10px;
   transition: all 0.4s 0s;
+  margin: 5px;
 }
 
 .mybutton:hover {

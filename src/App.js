@@ -7,7 +7,21 @@ import Button from "./Components/Button";
 export default function App() {
   return (
     <div className="App">
-      <Button></Button>
+      <Button
+        onClick={() => {
+          console.log("sub one");
+        }}
+      >
+        Sub 1{" "}
+      </Button>
+
+      <Button
+        onClick={() => {
+          console.log("ADD one");
+        }}
+      >
+        ADD 1{" "}
+      </Button>
     </div>
   );
 }

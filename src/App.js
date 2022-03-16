@@ -1,29 +1,62 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./styles.css";
+
+// export default function App() {
+//   const [counter, setCounter] = useState(0);
+//   const ref = useRef("Masai");
+
+//   console.log(ref.current);
+
+//   return (
+//     <div className="App">
+//       <h3>Counter : {counter}</h3>
+//       <button
+//         onClick={() => {
+//           setCounter(counter + 1);
+//         }}
+//       >
+//         Add 1
+//       </button>
+//       <button
+//         onClick={() => {
+//           ref.current = "new Name";
+//           console.log("Name is", ref.current);
+//         }}
+//       >
+//         Change Name
+//       </button>
+//     </div>
+//   );
+// }
 
 export default function App() {
   const [counter, setCounter] = useState(0);
-  const ref = useRef("Masai");
+  const ref = useRef(null);
 
-  console.log(ref.current);
+  useEffect(() => {
+    ref.current = setInterval(() => {
+      setCounter((p) => p + 1);
+    }, 1000);
+  }, []);
 
   return (
     <div className="App">
       <h3>Counter : {counter}</h3>
       <button
         onClick={() => {
-          setCounter(counter + 1);
+          clearInterval(ref.current);
         }}
       >
-        Add 1
+        Stop
       </button>
       <button
         onClick={() => {
-          ref.current = "new Name";
-          console.log("Name is", ref.current);
+          ref.current = setInterval(() => {
+            setCounter((p) => p + 1);
+          }, 1000);
         }}
       >
-        Change Name
+        Start
       </button>
     </div>
   );

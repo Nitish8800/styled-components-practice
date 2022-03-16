@@ -2,7 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import "./styles.css";
 import React from "react";
 // import styled from "styled-components";
-import Button from "./Components/Button";
+import { Button } from "./Components/Button";
+import { Flex } from "./Components/flex";
 
 export default function App() {
   const [theme, setTheme] = useState("light");
@@ -35,6 +36,11 @@ export default function App() {
       >
         Change Theme
       </button>
+      <Flex justify="center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </Flex>
     </div>
   );
 }

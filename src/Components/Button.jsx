@@ -17,6 +17,12 @@ const Button = styled.button`
   }
 `;
 
+export { Button };
+
+// const Button = () => {
+//   return <StyledButton></StyledButton>;
+// };
+
 /*   
     color: white;
     box-shadow: -3px 6px 2px 1px rgba(0, 0, 255, 0.2);
@@ -28,5 +34,3 @@ const Button = styled.button`
 //     </button>
 //   );
 // };
-
-export default Button;

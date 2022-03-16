@@ -34,10 +34,14 @@ export default function App() {
   const ref = useRef(null);
 
   useEffect(() => {
+    startTimer();
+  }, []);
+
+  const startTimer = () => {
     ref.current = setInterval(() => {
       setCounter((p) => p + 1);
-    }, 1000);
-  }, []);
+    }, 300);
+  };
 
   return (
     <div className="App">
@@ -49,14 +53,14 @@ export default function App() {
       >
         Stop
       </button>
+      <button onClick={startTimer}>Start</button>
       <button
         onClick={() => {
-          ref.current = setInterval(() => {
-            setCounter((p) => p + 1);
-          }, 1000);
+          clearInterval(ref.current);
+          setCounter(0);
         }}
       >
-        Start
+        Reset
       </button>
     </div>
   );

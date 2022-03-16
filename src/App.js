@@ -3,11 +3,9 @@ import "./styles.css";
 
 export default function App() {
   const [counter, setCounter] = useState(0);
-  const ref = useRef();
+  const ref = useRef("Masai");
 
-  let name = "Masai";
-
-  console.log(name);
+  console.log(ref.current);
 
   return (
     <div className="App">
@@ -21,8 +19,8 @@ export default function App() {
       </button>
       <button
         onClick={() => {
-          name = "new Name";
-          console.log("Name is", name);
+          ref.current = "new Name";
+          console.log("Name is", ref.current);
         }}
       >
         Change Name

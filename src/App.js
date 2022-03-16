@@ -1,5 +1,16 @@
 import { useState, useRef, useEffect } from "react";
 import "./styles.css";
+import React from "react";
+// import styled from "styled-components";
+import Button from "./Components/Button";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Button></Button>
+    </div>
+  );
+}
 
 // export default function App() {
 //   const [counter, setCounter] = useState(0);
@@ -29,41 +40,41 @@ import "./styles.css";
 //   );
 // }
 
-export default function App() {
-  const [counter, setCounter] = useState(0);
-  const ref = useRef(null);
+// export default function App() {
+//   const [counter, setCounter] = useState(0);
+//   const ref = useRef(null);
 
-  useEffect(() => {
-    startTimer();
-  }, []);
+//   useEffect(() => {
+//     startTimer();
+//   }, []);
 
-  const startTimer = () => {
-    ref.current = setInterval(() => {
-      setCounter((p) => p + 1);
-    }, 300);
-  };
+//   const startTimer = () => {
+//     ref.current = setInterval(() => {
+//       setCounter((p) => p + 1);
+//     }, 300);
+//   };
 
-  // console.log()
+//   // console.log()
 
-  return (
-    <div className="App">
-      <h3>Counter : {counter}</h3>
-      <button
-        onClick={() => {
-          clearInterval(ref.current);
-        }}
-      >
-        Stop
-      </button>
-      <button onClick={startTimer}>Start</button>
-      <button
-        onClick={() => {
-          clearInterval(ref.current);
-          setCounter(0);
-        }}
-      >
-        Reset
-      </button>
-    </div>
-  );
-}
+//   return (
+//     <div className="App">
+//       <h3>Counter : {counter}</h3>
+//       <button
+//         onClick={() => {
+//           clearInterval(ref.current);
+//         }}
+//       >
+//         Stop
+//       </button>
+//       <button onClick={startTimer}>Start</button>
+//       <button
+//         onClick={() => {
+//           clearInterval(ref.current);
+//           setCounter(0);
+//         }}
+//       >
+//         Reset
+//       </button>
+//     </div>
+//   );
+// }

@@ -1,0 +1,12 @@
+.mybutton {
+  border: none;
+  background-color: red;
+  border-radius: 4px;
+  padding: 10px;
+  transition: all 0.4s 0s;
+}
+
+.mybutton:hover {
+  color: white;
+  box-shadow: -3px 6px 2px 1px rgba(0, 0, 255, 0.2);
+}

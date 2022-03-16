@@ -1,10 +1,19 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h3>Counter : {counter}</h3>
+      <button
+        onClick={() => {
+          setCounter(counter + 1);
+        }}
+      >
+        Add 1
+      </button>
     </div>
   );
 }

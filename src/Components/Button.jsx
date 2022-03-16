@@ -4,12 +4,12 @@ import styled from "styled-components";
 
 const Button = styled.button`
   border: none;
-  background-color: blue;
+  background-color: ${({ theme }) => (theme === "light" ? "red" : "yellow")};
   border-radius: 4px;
   padding: 10px;
   transition: all 0.4s 0s;
   margin: 5px;
-  color: white;
+  color: ${({ theme }) => (theme === "dark" ? "black" : "white")};
 
   &:hover {
     color: white;

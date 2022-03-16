@@ -5,23 +5,36 @@ import React from "react";
 import Button from "./Components/Button";
 
 export default function App() {
+  const [theme, setTheme] = useState("light");
+
   return (
     <div className="App">
       <Button
+        theme={theme}
         onClick={() => {
           console.log("sub one");
         }}
       >
-        Sub 1{" "}
+        Sub 1
       </Button>
 
       <Button
+        theme={theme}
         onClick={() => {
           console.log("ADD one");
         }}
       >
-        ADD 1{" "}
+        ADD 1
       </Button>
+      <br />
+
+      <button
+        onClick={() => {
+          setTheme(theme === "light" ? "dark" : "light");
+        }}
+      >
+        Change Theme
+      </button>
     </div>
   );
 }

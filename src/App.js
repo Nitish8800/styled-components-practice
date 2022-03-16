@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./styles.css";
 
 export default function App() {
   const [counter, setCounter] = useState(0);
+  const ref = useRef();
+
+  let name = "Masai";
+
+  console.log(name);
 
   return (
     <div className="App">
@@ -13,6 +18,14 @@ export default function App() {
         }}
       >
         Add 1
+      </button>
+      <button
+        onClick={() => {
+          name = "new Name";
+          console.log("Name is", name);
+        }}
+      >
+        Change Name
       </button>
     </div>
   );
